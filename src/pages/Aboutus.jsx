@@ -6,8 +6,6 @@ import crmlogo3 from '../assets/crmlogo3.png';
 import crmlogo4 from '../assets/crmlogo4.png';
 import crmlogo5 from '../assets/crmlogo5.png';
 import crmlogo6 from '../assets/crmlogo6.png';
-import epicurious from '../assets/epicurious.svg';
-import globalbank from '../assets/globalbank.svg';
 import aboutus1 from '../assets/aboutus1.jpg';
 import aboutus2 from '../assets/aboutus2.jpg';
 import aboutus3 from '../assets/aboutus3.jpg';

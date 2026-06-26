@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { FiPlus, FiRefreshCw, FiSettings, FiCheck, FiX, FiAlertTriangle, FiExternalLink, FiDollarSign, FiTrendingUp, FiUsers, FiMail, FiBriefcase, FiGlobe, FiZap, FiEye, FiArrowRight } from 'react-icons/fi';
 
 const DataEnrichment = () => {
-  const [selectedSource, setSelectedSource] = useState('all');
   const [showRulesModal, setShowRulesModal] = useState(false);
   const [selectedEnrichmentSource, setSelectedEnrichmentSource] = useState(null);
   const [showDetailsModal, setShowDetailsModal] = useState(false);

@@ -4,7 +4,6 @@ import { FiPlus, FiFilter, FiDownload, FiPlay, FiPause, FiEdit3, FiTrash2, FiEye
 const DataSets = () => {
   const [viewMode, setViewMode] = useState('table');
   const [showCreateModal, setShowCreateModal] = useState(false);
-  const [selectedFilters, setSelectedFilters] = useState([]);
   const [selectedDataSet, setSelectedDataSet] = useState(null);
   const [showDetailsModal, setShowDetailsModal] = useState(false);
   const [refreshingDataSets, setRefreshingDataSets] = useState(new Set());
@@ -119,7 +118,7 @@ const DataSets = () => {
     }, 2000);
   };
 
-  const handleCreateDataSet = (formData) => {
+  const handleCreateDataSet = () => {
     alert('Dataset created successfully!');
     setShowCreateModal(false);
   };

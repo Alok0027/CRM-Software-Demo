@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import zestful from '../assets/clientnestlogo.jpeg';
 import { FiChevronDown } from 'react-icons/fi';
 
 const Navbar = () => {
-  const [isPagesMenuOpen, setPagesMenuOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (

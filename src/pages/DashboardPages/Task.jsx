@@ -1,5 +1,5 @@
-import React, { useState, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useEffect, useMemo, useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
 import { FiPlus, FiTrash2, FiCheck, FiMoreVertical, FiUserPlus, FiShare2, FiEdit, FiCalendar, FiFlag, FiLayout, FiList, FiTag, FiChevronDown, FiPlay, FiSquare, FiClock, FiZap } from 'react-icons/fi';
 import { DndContext, PointerSensor, KeyboardSensor, useSensor, useSensors, closestCenter } from '@dnd-kit/core';
 import { arrayMove, sortableKeyboardCoordinates, SortableContext, useSortable } from '@dnd-kit/sortable';
@@ -7,8 +7,8 @@ import { CSS } from '@dnd-kit/utilities';
 
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
-import TaskForm from "../../components/Taskform";
-import { format } from 'date-fns';
+import TaskForm from '../../components/Taskform';
+import { format, isSameDay } from 'date-fns';
 const initialTasks = [
   { id: 'task-1', text: 'Finalize Q3 marketing campaign materials', completed: false, dueDate: '2024-07-15', priority: 'High', assignedTo: { name: 'Jane Doe', avatar: 'https://randomuser.me/api/portraits/women/2.jpg' }, status: 'In Progress', subtasks: [{id: 'sub-1', text: 'Draft copy', completed: true}], comments: [{id: 'com-1', text: 'First draft looks good!', author: {name: 'John'}, timestamp: '2 hours ago'}], tags: ['Marketing', 'Urgent'], timeTracked: 0, isTracking: false, workload: 8 },
   { id: 'task-2', text: 'Develop new user onboarding flow for the app', completed: false, dueDate: '2024-07-20', priority: 'High', assignedTo: { name: 'John Smith', avatar: 'https://randomuser.me/api/portraits/men/4.jpg' }, status: 'To-Do', subtasks: [], comments: [], tags: ['UX', 'Development'], workload: 13 },
@@ -295,8 +295,6 @@ const Tasks = () => {
     if (activeContainer !== overContainer) {
       setTasks((prev) => {
         const activeIndex = prev.findIndex((t) => t.id === activeId);
-        const overIndex = over.data.current?.sortable ? prev.findIndex(t => t.id === overId) : prev.length;
-
         let newTasks = [...prev];
         const [movedTask] = newTasks.splice(activeIndex, 1);
         movedTask.status = overContainer;

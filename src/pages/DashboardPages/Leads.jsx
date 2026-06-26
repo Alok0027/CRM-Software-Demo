@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { FiPlus, FiMoreVertical, FiEdit, FiTrash2, FiMail, FiUsers } from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import Modal from '../../components/Modal';
 import LeadForm from '../../components/LeadForm';
 

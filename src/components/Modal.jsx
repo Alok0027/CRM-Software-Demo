@@ -1,19 +1,19 @@
 import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import { FiX } from 'react-icons/fi';
 
 const Modal = ({ isOpen, onClose, title, children }) => {
   return (
     <AnimatePresence>
       {isOpen && (
-        <motion.div
+        <div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 flex items-center justify-center p-4"
           onClick={onClose}
         >
-          <motion.div
+          <div
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -50, opacity: 0 }}
@@ -33,8 +33,8 @@ const Modal = ({ isOpen, onClose, title, children }) => {
             <div className="p-4 sm:p-6">
               {children}
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       )}
     </AnimatePresence>
   );

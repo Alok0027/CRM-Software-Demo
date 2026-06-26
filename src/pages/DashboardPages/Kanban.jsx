@@ -56,8 +56,6 @@ const Kanban = () => {
     const [columns] = useState(initialColumns);
     const [isModalOpen, setIsModalOpen] = useState(false);
         const [editingTask, setEditingTask] = useState(null);
-    const [selectedColumn, setSelectedColumn] = useState(null);
-
     const sensors = useSensors(
         useSensor(PointerSensor, {
             activationConstraint: {

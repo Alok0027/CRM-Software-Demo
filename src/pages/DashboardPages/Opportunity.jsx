@@ -17,8 +17,6 @@ const opportunityStages = [
 // Orange theme palette
 const pieColors = ['#FFB84C', '#FFA559', '#FF8C42', '#FF7F3F', '#FF6F3C'];
 const barColors = ['#FFB84C', '#FFA559', '#FF8C42', '#FF7F3F', '#FF6F3C']; // for bar chart stages
-const lineGradient = ['#FFB84C', '#FF7F3F']; // for line chart gradient
-
 const monthlyConversionRates = [
   { month: 'Jan', rate: 18 },
   { month: 'Feb', rate: 22 },

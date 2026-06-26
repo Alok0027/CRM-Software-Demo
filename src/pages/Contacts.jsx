@@ -1,8 +1,8 @@
 import React, { useState, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import { FiMail, FiPhone, FiSearch, FiPlus, FiBriefcase, FiUser, FiInfo, FiEdit, FiTrash2 } from 'react-icons/fi';
 import Modal from '../components/Modal';
-import ContactForm from '../components/ContactForm';
+import ContactForm from '../components/Contactform';
 
 const initialContacts = [
     {
@@ -81,7 +81,7 @@ const initialContacts = [
 
 const ContactCard = ({ contact, onEdit, onDelete }) => {
     return (
-                <motion.div
+                                <div
             layout
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -139,7 +139,7 @@ const ContactCard = ({ contact, onEdit, onDelete }) => {
                     <span className="font-medium">{contact.company}</span>
                 </div>
             </div>
-        </motion.div>
+                </div>
     );
 };
 

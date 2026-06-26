@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { FiUser, FiBell, FiSun, FiMoon, FiShield, FiLogOut, FiUpload, FiTrash2 } from 'react-icons/fi';
-import { useTheme } from '../context/ThemeContext.jsx';
+import { useTheme } from '../context/useTheme.js';
 
 const Settings = () => {
   const themeContext = useTheme();

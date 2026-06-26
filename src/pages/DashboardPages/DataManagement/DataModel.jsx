@@ -6,7 +6,7 @@ const DataModel = () => {
   const [showAddFieldModal, setShowAddFieldModal] = useState(false);
   const [showEntityModal, setShowEntityModal] = useState(false);
   const [showVersionHistory, setShowVersionHistory] = useState(false);
-  const [editingField, setEditingField] = useState(null);
+  const [, setEditingField] = useState(null);
 
   const entities = [
     {

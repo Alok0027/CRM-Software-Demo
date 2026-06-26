@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
 import crmpic1 from '../assets/crmpic1.png';
 import route from '../assets/route.svg';
 

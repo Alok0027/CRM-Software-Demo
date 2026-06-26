@@ -213,10 +213,6 @@ const Dashboard = () => {
                 ["Marketplace", "Error", "20 May 2021"],
                 ["Weekly Update", "Approved", "12 May 2021"],
               ].map(([name, status, date], idx) => {
-                let statusColor = '';
-                if (status === "Approved") statusColor = 'bg-green-100 text-green-800';
-                else if (status === "Disable") statusColor = 'bg-gray-100 text-gray-600';
-                else if (status === "Error") statusColor = 'bg-red-100 text-red-800';
                 return (
                   <tr key={idx} className="hover:bg-gray-50 text-sm text-gray-700">
                     <td className="px-4 py-2">{name}</td>

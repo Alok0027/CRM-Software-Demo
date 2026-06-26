@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
 import { FiPaperclip, FiMessageSquare, FiClock, FiMoreHorizontal, FiEdit2, FiTrash2, FiCheckSquare, FiShare2, FiMail } from 'react-icons/fi';

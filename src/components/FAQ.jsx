@@ -1,29 +1,27 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 
 const Accordion = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="bg-gray-50 rounded-lg">
-      <motion.button
+      <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex w-full items-center justify-between text-left text-gray-800 p-6"
       >
         <span className="text-lg font-medium">{question}</span>
-        <motion.span
+        <span
           className="ml-6 flex h-7 items-center text-orange-500"
-          animate={{ rotate: isOpen ? 45 : 0 }}
-          transition={{ duration: 0.3, ease: 'easeInOut' }}
         >
           <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
           </svg>
-        </motion.span>
-      </motion.button>
+        </span>
+      </button>
       <AnimatePresence>
         {isOpen && (
-          <motion.div
+          <div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto'}}
             exit={{ opacity: 0, height: 0 }}
@@ -31,7 +29,7 @@ const Accordion = ({ question, answer }) => {
             className="overflow-hidden"
           >
             <p className="px-6 pb-6 text-gray-600">{answer}</p>
-          </motion.div>
+          </div>
         )}
       </AnimatePresence>
     </div>

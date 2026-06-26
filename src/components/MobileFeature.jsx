@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { useScroll, useTransform } from 'framer-motion';
 import mobileMockup from '../assets/mobile-mockup.svg';
 import CrmMobileContent from './CrmMobileContent';
 
@@ -21,9 +21,9 @@ const MobileFeature = () => {
               <img src={mobileMockup} alt="Mobile App Mockup" className="w-full h-auto" />
               <div className="absolute inset-0 p-5 pt-12 pb-8">
                 <div className="h-full w-full overflow-hidden rounded-2xl">
-                  <motion.div style={{ y }}>
+                  <div style={{ transform: `translateY(${y})` }}>
                     <CrmMobileContent />
-                  </motion.div>
+                  </div>
                 </div>
               </div>
             </div>
