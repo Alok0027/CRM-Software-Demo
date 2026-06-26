@@ -80,7 +80,7 @@ const teamActivityChart = {
       { label: 'Meetings', data: teamActivityData.meetings, backgroundColor: 'rgba(255, 127, 63, 0.8)' },
     ],
   },
-  options: { responsive: true, maintainAspectRatio: false, indexAxis: 'y', scales: { x: { stacked: true }, y: { stacked: true } }, plugins: { legend: { position: 'bottom' } }, scales: { x: { grid: { display: false } }, y: { grid: { display: false } } } },
+  options: { responsive: true, maintainAspectRatio: false, indexAxis: 'y', scales: { x: { stacked: true, grid: { display: false } }, y: { stacked: true, grid: { display: false } } }, plugins: { legend: { position: 'bottom' } } },
 };
 
 // 5. Deal Stage Distribution (Doughnut Chart)
